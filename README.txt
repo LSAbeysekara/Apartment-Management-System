@@ -1,42 +1,28 @@
-Owner
-1.	Home
-•	Shortcuts with notifications and new notification messages and count
-2.	Request Form
-•	Entry pass
-•	Fill out form (Take people from outside for maintenance.)
-•	Caretaker and maid fill out form for elders and disable people (Vehicle also)
-•	History
-3.	Maintenance
-•	Form like complain 
-•	History
-4.	Complain
-•	Complain form
-•	History
-5.	Bill and payments
-•	Show bills first (New on the top)
-	Mark unread new bills 
-	Add “Pay now” button in the bills to pay the price
-	Can tick the checkbox which bills going to pay
- 	Full 		Half		Outstanding (with total)
-	Display a message how outstanding made
-	Should load the bill price in the payment gateway price
-	Update the database with bill type and price and update outstanding 
-•	Bill history
-•	Payment history
-6.	User profile
+    Apartment Management System
+Description
+The Apartment Management System is a comprehensive web-based application designed to simplify and streamline the management of apartments. Built using PHP, JavaScript, HTML, and CSS, this system offers an intuitive interface for managing apartment details, residents, and payments efficiently. The application is integrated with the PayHere Payment Gateway, enabling seamless and secure online payment processing.
 
-Management
-1.	Dashboard
-•	Shortcut 
-•	New request 
-2.	Registration for customers and apartment details registration
-3.	Bills and payments with month
-•	Create new bill type
-•	Enter bills values
-•	
-4.	
+Features
+        Resident Management: Add, update, and manage resident details.
+        Apartment Information: View and maintain apartment-specific data such as block, floor, and unit details.
+        Payment Processing: Integrated with PayHere for secure online payment transactions.
+        User-Friendly Interface: Responsive design ensuring a smooth user experience across devices.
+        Secure Login and Authentication: Protects sensitive data with robust access control.
 
-Administration
-1.	Management registration
-2.	User registration
-3.	Bill payment and outstanding edit
+Technologies Used
+        Back-End: PHP
+        Front-End: HTML, CSS, JavaScript
+        Payment Integration: PayHere Payment Gateway
+
+Installation
+Clone the repository to your local machine:
+                git clone https://github.com/LSAbeysekara/Apartment-Management-System.git  
+Set up the database by importing the provided SQL file.
+Update configuration files with your server and PayHere API credentials.
+Host the application on a local or remote server.
+
+How to Contribute
+Feel free to fork this repository and make improvements. Pull requests are welcome!
+
+License
+This project is licensed under the MIT License.
