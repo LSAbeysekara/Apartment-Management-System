@@ -1,0 +1,869 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  display: flex;
+  background-color: #f0f2f5;
+}
+
+.sidebar {
+  background-color: #5e2b97;
+  width: 240px;
+  height: 100vh;
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.active-sub {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-link.active .arrow {
+  color: #ffffff;
+}
+
+.arrow {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.nav-item.expanded .arrow {
+  transform: rotate(90deg);
+}
+
+.sub-links {
+  list-style: none;
+  padding: 5px 0 5px 15px;
+  display: none;
+}
+
+.nav-item.expanded .sub-links {
+  display: block;
+}
+
+.sub-links a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 0;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.sub-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ======================================================== Main Styles ===================================================================== */
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 28px;
+  margin: 0 0 20px 0;
+  color: #5e2b97;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* ============================================== Table styles ====================================================== */
+
+.tables-section {
+  margin-top: 20px;
+}
+
+.table-wrapper {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #5e2b97;
+  margin-bottom: 10px;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+  background: #5e2b97;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.styled-table tbody tr:hover {
+  background: rgba(94, 43, 151, 0.1);
+}
+
+.btn-approve,
+.btn-reject,
+.btn-view,
+.btn-disable {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-approve {
+  background-color: #5e2b97;
+  color: #ffffff;
+}
+
+.btn-disable {
+  background-color: #848484;
+  color: #ffffff;
+}
+
+.btn-reject {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+.btn-view {
+  background-color: #9b79e5;
+  color: #ffffff;
+}
+
+.btn-view:hover {
+  background-color: #9254d4;
+}
+
+.btn-approve:hover {
+  background-color: #4e237d;
+}
+
+.btn-reject:hover {
+  background-color: #c0392b;
+}
+
+/* ================================================= Form Styles =================================================== */
+
+.form-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 70vw;
+}
+
+.form-container h2 {
+  color: #5e2b97;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #5e2b97;
+}
+
+.form-group select,
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="tel"],
+.form-group input[type="email"] {
+  font-size: 1rem;
+  width: 98%;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.form-group select:focus,
+.form-group input[type="number"]:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="email"]:focus {
+  border-color: #5e2b97;
+}
+
+.form-inline-group {
+  display: flex;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-inline-group input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.form-inline-group input[type="text"]:focus {
+  border-color: #5e2b97;
+}
+
+.submit-btn {
+  background-color: #5e2b97;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #4e237d;
+}
+
+/* ================================================= Form Image Styles =================================================== */
+
+.form-container img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  cursor: pointer; /* Pointer cursor on hover */
+  position: relative; /* Default position */
+  z-index: 1; /* Ensure it is behind when not hovered */
+}
+
+.form-container img:hover {
+  position: absolute; /* Float above everything */
+  z-index: 10; /* Bring the image above other elements */
+  transform: scale(3); /* Scale up the image */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for the floating effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ================================================= Form select status Styles =================================================== */
+
+.status-select {
+  display: flex;
+  justify-content: flex-end; /* Align the select box to the right */
+  padding: 10px; /* Add some padding around the container */
+}
+
+.status-select select {
+  padding: 10px 20px; /* Add padding inside the select box */
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  color: #333; /* Text color */
+  font-size: 16px; /* Font size for better readability */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  outline: none; /* Remove the default outline */
+  cursor: pointer;
+}
+
+.status-select select:hover {
+  border-color: #007bff; /* Border changes color on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.status-select select:focus {
+  border-color: #007bff; /* Border color when the select box is focused */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Highlight the focus with a blue glow */
+}
+.button-container {
+  display: flex;
+  justify-content: space-around; /* Align buttons in the same row */
+  align-items: center;
+  width: 100%;
+}
+
+.view-btn, .edit-btn,.sus-btn {
+  display: inline-block;
+  color: white;
+  width: 100%; /* Adjust width to fit both buttons */
+  letter-spacing: 0.01rem;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.16s ease; /* Added zoom animation */
+  margin: 2% auto;
+  padding: 2%;
+
+  line-height: 25px;
+  border-radius: 25%;
+}
+
+.view-btn {
+  background-color: #2b6fee;
+}
+
+.sus-btn {
+  background-color: #c0392b;
+}
+
+
+.edit-btn {
+  background-color: #ee932b;
+}
+
+.view-btn:hover, .edit-btn:hover ,.sus-btn:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.form-row-entry-pass {
+  display: flex;
+  gap: 20px; /* Adds space between the fields */
+}
+
+.form-group-entry-pass {
+  flex: 1; /* Makes each form group take up equal width */
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-entry-pass > input[type="date"] {
+  width: 100%; /* Ensures input fills the available width */
+}
+
+.form-group-entry-pass {
+  margin-bottom: 15px;
+}
+
+.form-group-entry-pass label {
+  display: block;
+  margin-bottom: 5px;
+  color: #5e2b97;
+}
+
+.form-group-entry-pass textarea,
+.form-group-entry-pass select,
+.form-group-entry-pass input[type="text"],
+.form-group-entry-pass input[type="number"],
+.form-group-entry-pass input[type="file"],
+.form-group-entry-pass input[type="date"],
+.form-group-entry-pass input[type="tel"],
+.form-group-entry-pass input[type="email"] {
+  font-size: 1rem;
+  width: 98%;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.form-group-entry-pass textarea:focus,
+.form-group-entry-pass select:focus,
+.form-group-entry-pass input[type="number"]:focus,
+.form-group-entry-pass input[type="file"]:focus,
+.form-group-entry-pass input[type="text"]:focus,
+.form-group-entry-pass input[type="date"]:focus,
+.form-group-entry-pass input[type="tel"]:focus,
+.form-group-entry-pass input[type="email"]:focus {
+  border-color: #5e2b97;
+}
+
+
+/*========================================================================================= Responsive Styles ===================================================================*/
+
+/* For devices larger than 1024px */
+@media only screen and (min-width: 1025px) {
+}
+
+/* ======================================= For devices up to 1024px (laptops) =============================================*/
+@media only screen and (max-width: 1024px) {
+  .dashboard {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+}
+
+/* ======================================= For devices up to 768px (tablets) =============================================*/
+
+@media only screen and (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+
+/* ======================================= For devices up to 550px (mobile phones) =============================================*/
+
+@media only screen and (max-width: 643px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================================= For devices up to 440px (mobile phones) =============================================*/
+
+@media only screen and (max-width: 440px){
+}
+
+/*================================================== Profile  Styles =============================================================*/
+.form-container-prof {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 70vw;
+}
+
+.form-container-prof h2 {
+  color: #5e2b97;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.topic {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center h2 horizontally */
+  align-items: center; /* Center h2 vertically */
+  height: 60px; /* Adjust height as needed */
+  border: 1px solid #ccc; /* Optional: For visual reference */
+  padding-right: 40px; /* Adjust to prevent overlap with the icon */
+}
+
+.icon-link {
+  position: absolute;
+  top: 10px; /* Adjust as needed to position vertically */
+  right: 10px; /* Position to the top-right corner */
+  font-size: 24px; /* Adjust icon size as needed */
+  color: #5e2b97; /* Optional: Icon color */
+  cursor: pointer;
+}
+
+.icon-link:hover {
+  color: #4e237d; /* Optional: Change color on hover */
+}
+
+.image-container-prof {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-image-prof {
+  width: 150px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+  border-radius: 50%; /* Makes the image circular */
+  border: 2px solid #ccc; /* Optional: Border for the profile picture */
+  object-fit: cover;
+  margin-bottom: 10px; /* Spacing between image and input */
+}
+
+.upload-input-prof {
+  display: none; /* Hides the default file input */
+}
+
+.upload-label-prof {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #5e2b97; /* Customize button color */
+  border-radius: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-label-prof:hover {
+  background-color: #4e237d; /* Hover effect */
+}
+
+/* Style for the "Change Password" button */
+.pass-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #5e2b97; /* Button color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Spacing if other buttons are adjacent */
+}
+
+.pass-btn:hover {
+  background-color: #4e237d; /* Hover effect */
+}
+
+/* Style for the "Submit" button */
+.submit-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #5e2b97; /* Green for submit */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #500f9b; /* Darker green on hover */
+}
+
+/* Style for the "Cancel" button */
+.cancel-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #f44336; /* Red for cancel */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancel-btn:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns content to the right */
+  width: 100%;
+}
+
+.submit-cancel-group {
+  display: flex;
+  gap: 10px; /* Adds spacing between Submit and Cancel */
+}
+
+/*================================================== Change password  Styles =============================================================*/
+.input-wrapper {
+    display: flex; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+}
+
+.input-wrapper input {
+    width: 100%; /* Full width for input */
+    height: 40px; /* Adjust height as needed */
+    padding-right: 40px; /* Space for the icon */
+    box-sizing: border-box; /* Include padding in total width */
+}
+
+.input-wrapper .toggle-visibility {
+    margin-left: 10px; /* Space between input and icon */
+    cursor: pointer; /* Pointer cursor for clickability */
+    font-size: 20px; /* Icon size */
+    color: #666; /* Icon color */
+}
+
+/* ================================================= Bill History Styles =================================================== */
+.submit-button {
+  background-color: #6923aa; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Some padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.submit-button:hover {
+  background-color: #4e098f; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.submit-button:active {
+  background-color: #4e098f; /* Even darker green when clicked */
+  transform: scale(0.98); /* Slightly shrink on click */
+}
+
+/* =============================== Edit button Styles ================================= */
+.btn-edit {
+  background-color: #aaa823; /* Green background */
+  color: white; /* White text */
+  padding: 5px 15px; /* Some padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.btn-edit:hover {
+  background-color: #838115; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.btn-edit:active {
+  background-color: #838115; /* Even darker green when clicked */
+  transform: scale(0.98); /* Slightly shrink on click */
+}
+
+/* =============================== Save button Styles ================================= */
+.btn-save {
+  background-color: #159220; /* Green background */
+  color: white; /* White text */
+  padding: 5px 15px; /* Some padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.btn-save:hover {
+  background-color: #0d5c13; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.btn-save:active {
+  background-color: #0d5c13; /* Even darker green when clicked */
+  transform: scale(0.98); /* Slightly shrink on click */
+}
+
+/* Active Button */
+.btn-activate {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  
+}
+
+.btn-activate:hover {
+  background-color: #45a049; /* Darker Green */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-activate:active {
+  background-color: #388e3c; /* Even darker Green */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Deactivate Button */
+.btn-deactivate {
+  background-color: #f44336; /* Red */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-deactivate:hover {
+  background-color: #e53935; /* Darker Red */
+}
+
+.btn-deactivate:active {
+  background-color: #d32f2f; /* Even darker Red */
+}
+
+/* Inactive Button */
+.btn-inactive {
+  background-color: #9e9e9e; /* Gray */
+  color: white;
+}
+
+.btn-inactive:hover {
+  background-color: #757575; /* Darker Gray */
+}
+
+.btn-inactive:active {
+  background-color: #616161; /* Even darker Gray */
+}
+
+/* ================================================= Bill History Styles =================================================== */
+.submit-button {
+  background-color: #6923aa; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Some padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.submit-button:hover {
+  background-color: #4e098f; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.submit-button:active {
+  background-color: #4e098f; /* Even darker green when clicked */
+  transform: scale(0.98); /* Slightly shrink on click */
+}
+
+/* =============================== Edit button Styles ================================= */
+.btn-edit {
+  background-color: #aaa823; /* Green background */
+  color: white; /* White text */
+  padding: 5px 15px; /* Some padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.btn-edit:hover {
+  background-color: #838115; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.btn-edit:active {
+  background-color: #838115; /* Even darker green when clicked */
+  transform: scale(0.98); /* Slightly shrink on click */
+}
+
+/* =============================== Save button Styles ================================= */
+.btn-save {
+  background-color: #159220; /* Green background */
+  color: white; /* White text */
+  padding: 5px 15px; /* Some padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.btn-save:hover {
+  background-color: #0d5c13; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.btn-save:active {
+  background-color: #0d5c13; /* Even darker green when clicked */
+  transform: scale(0.98); /* Slightly shrink on click */
+}
+
+/* =============================== Add button Styles ================================= */
+.btn-add {
+  background-color: #b3b025; /* Green background */
+  color: white; /* White text */
+  padding: 5px 15px; /* Some padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.btn-add:hover {
+  background-color: #6b6a0c; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.btn-add:active {
+  background-color: #6b6a0c; /* Even darker green when clicked */
+  transform: scale(0.98); /* Slightly shrink on click */
+}
+
+/* =============================== Cancel button Styles ================================= */
+.btn-cancel {
+  background-color: #e94a19; /* Green background */
+  color: white; /* White text */
+  padding: 5px 15px; /* Some padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.btn-cancel:hover {
+  background-color: #af3814; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.btn-cancel:active {
+  background-color: #af3814; /* Even darker green when clicked */
+  transform: scale(0.98); /* Slightly shrink on click */
+}

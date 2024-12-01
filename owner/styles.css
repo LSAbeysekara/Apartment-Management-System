@@ -1,0 +1,1379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("../assets/images/background/1.jpg"); /* Background image path */
+  background-size: cover; /* Makes sure the image covers the entire background */
+  background-attachment: fixed; /* Keeps the background fixed when scrolling */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center center; /* Centers the image in the viewport */
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh; /* Ensures the body takes up the full viewport height */
+  max-height: 100%;
+  overflow: hidden; /* Prevents scrolling to ensure the image covers the entire background */
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+/* Header and navigation bar starts here */
+
+/* header */
+header {
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 3px 10px; /* Reduced padding for smaller screens */
+  text-align: center;
+  border-bottom-left-radius: 25px; /* Adjust the radius value as needed */
+  border-bottom-right-radius: 25px; /* Adjust the radius value as needed */
+}
+
+/* navigation bar */
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  text-align: center; /* Center text below icons */
+  margin: 0 10px; /* Space between nav items */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7b4cb4; /* Purple background */
+  border-radius: 50%; /* Makes the container circular */
+  width: 50px; /* Adjust the size as needed */
+  height: 50px; /* Adjust the size as needed */
+  margin: 0 auto; /* Center the circle horizontally */
+}
+
+.icon {
+  font-size: 28px; /* Adjust icon size to fit inside the circle */
+}
+
+.nav-label {
+  display: block; /* Stack label below the icon */
+  font-size: 15px; /* Smaller font size for labels */
+  margin-top: 5px; /* Space between icon and label */
+}
+
+/* Main starts from here */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Minimum height for better layout */
+  max-height: 90%; /* Prevents overflowing */
+  padding: 20px; /* Added padding for better spacing on mobile */
+}
+
+.form-section {
+  background-color: #eaeaea;
+  margin-top: 0px;
+  padding: 20px; /* Reduced padding for smaller screens */
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Make it responsive */
+  max-height: 90vh; /* Prevents the form from getting too tall */
+  overflow: none; /* Allows scrolling if content exceeds height */
+}
+
+h1 {
+  text-align: center;
+  color: #3d2a54;
+  margin-bottom: 30px; /* Reduced margin for better spacing */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="email"],
+textarea,
+select,
+button[type="submit"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a slight 3D effect */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus,
+button[type="submit"]:focus {
+  border-color: #3d2a54;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(61, 42, 84, 0.3); /* Darker shadow when focused */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="email"],
+textarea,
+select {
+  padding: 10px; /* Reduced padding for inputs */
+  margin-bottom: 5px; /* Reduced margin for inputs */
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+  transition: 0.1s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="number"],
+select:focus,
+textarea:focus {
+  border-color: #3d2a54;
+  outline: none;
+}
+
+textarea {
+  height: 80px; /* Reduced height for the textarea */
+  width: 100%;
+}
+
+.apartment-details {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  justify-content: space-between;
+}
+
+.apartment-details label {
+  width: 30%;
+}
+
+.apartment-details input {
+  width: 30%;
+  min-width: 150px; /* Minimum width for better responsiveness */
+}
+
+input[type="file"] {
+  margin-bottom: 15px; /* Reduced margin for file input */
+}
+
+button[type="submit"] {
+  background-color: #3d2a54;
+  color: white;
+  padding: 10px; /* Reduced padding for button */
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #5a3f73;
+}
+
+/* Custom Styles */
+
+.floating-label {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.floating-label input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="email"],
+select,
+.floating-label textarea {
+  width: 100%;
+  padding: 15px 10px 5px; /* Adjusted padding to make space for the label */
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+.floating-label .labelline {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  color: black;
+  transition: 0.3s ease all;
+  pointer-events: none; /* Prevents interaction with the label */
+}
+
+.floating-label input:focus + .labelline,
+.floating-label input:not(:placeholder-shown) + .labelline,
+.floating-label select:focus + .labelline,
+.floating-label select:not(:placeholder-shown) + .labelline,
+.floating-label textarea:focus + .labelline,
+.floating-label textarea:not(:placeholder-shown) + .labelline {
+  top: 0px;
+  left: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #3d2a54;
+  background: transparent;
+  padding: 0 5px;
+}
+
+/*========================================================================================= Home page css ===================================================================*/
+
+.main-shortcut {
+  display: flex;
+  margin-top: 15px;
+  min-height: fit-content;
+  justify-content: center;
+}
+
+.main-shortcut .card {
+  position: relative;
+  padding: 5px;
+  width: 23vw;
+  height: 5vw;
+  margin: 0.5vw 1vw;
+  font-size: 2vw;
+  background: white;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: #3d2a54;
+}
+
+.main-shortcut .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.main-shortcut h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 2.5vw;
+  height: 2.5vw;
+  text-align: center;
+  font-size: 1.5vw;
+  padding-bottom: 5px;
+}
+
+.history {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1vw;
+  background-color: white;
+  padding: 3px; /* Reduced padding for smaller screens */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 97%; /* Make it responsive */
+  max-height: 90vh; /* Prevents the form from getting too tall */
+}
+
+/* ================================================================= Request form css styles ================================================================= */
+
+.topic {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center h2 horizontally */
+  align-items: center; /* Center h2 vertically */
+  height: 60px; /* Adjust height as needed */
+  border: 1px solid #f0eeee; /* Optional: For visual reference */
+}
+
+.icon-link {
+  position: absolute;
+  top: 10px; /* Adjust as needed for positioning */
+  right: 10px; /* Adjust as needed for positioning */
+  text-decoration: none;
+}
+
+.material-symbols-outlined {
+  font-size: 24px; /* Adjust icon size as needed */
+  color: #000; /* Adjust icon color as needed */
+}
+
+.multi-form {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  margin-bottom: 1vw;
+  overflow: auto;
+}
+
+.multi-card {
+  flex: 1 1 auto;
+  left: auto;
+  right: auto;
+  display: flex;
+  min-width: 46%;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+/* ================================================================= Entry form css styles ================================================================= */
+
+.separate {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.left {
+  margin-top: 2vw;
+  max-width: 25%;
+  text-decoration: none;
+}
+
+.right {
+  max-width: 73%;
+  padding: 0 0.5vw;
+}
+
+/* /////////////////////////////////////////////////////////////////////// Left side - Navigation links /////////////////////////////////////////////////////////////////*/
+.navigation-link {
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease; /* Smooth slide-in transition */
+  transform: translateX(-90%); /* Start mostly hidden */
+  margin-bottom: 1vw;
+}
+
+.navigation-link:hover {
+  transform: translateX(0); /* Slide in fully on hover */
+}
+
+/* Individual navigation styles */
+.navigation {
+  padding: 8px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.navigation.one {
+  background-color: #cdbfdd;
+}
+
+.navigation.two {
+  background-color: #bb9ae0;
+}
+
+.navigation.three {
+  background-color: #9a59e6;
+  color: #0f0f0f;
+}
+
+.navigation.four {
+  background-color: #7d28df;
+  color: #f3f2f2;
+}
+
+.navigation.five {
+  background-color: #560caa;
+  color: #faf9f9;
+}
+
+.navigation.six {
+  background-color: #3e077c;
+  color: #faf9f9;
+}
+
+.navigation:hover {
+  background-color: #d8b6db;
+  color: black;
+}
+
+/* /////////////////////////////////////////////////////////////////////// Right side - Navigation links /////////////////////////////////////////////////////////////////*/
+
+.form-section2 {
+  background-color: #eaeaea;
+  margin-top: 0px;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 81vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-section2 form {
+  width: 100%;
+}
+
+.image-container {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #7d28df;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-input {
+  display: none;
+}
+
+.upload-label {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #7d28df;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-label:hover {
+  background-color: #9a59e6;
+}
+
+.form-separator {
+  display: flex;
+  width: 100%;
+}
+
+.form-entry-left {
+  width: 40%; /* Adjusts the width for the left part */
+  display: flex;
+  flex-direction: column; /* Makes the content stack vertically */
+  align-items: center; /* Centers content horizontally */
+  gap: 20px; /* Adds space between the image and radio button sections */
+}
+
+.form-entry-right {
+  width: 58%; /* Adjusts the width for the right part */
+  padding: 0 1vw;
+}
+
+.floating-label input[type="date"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.floating-label input[type="date"]:focus {
+  outline: none;
+  border-color: #7d28df; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(125, 40, 223, 0.5); /* Add a glow effect */
+}
+
+.labelline {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 0.9rem;
+  color: #666;
+  background: #cccccc; /* Matches the form background to blend in */
+  padding: 0 5px;
+  transition: 0.3s ease all;
+  pointer-events: none;
+}
+
+.floating-label input[type="date"]:not(:placeholder-shown) + .labelline,
+.floating-label input[type="date"]:focus + .labelline {
+  top: -10px;
+  left: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.pass-type-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ========================== radio button group css ===================== */
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  width: 165px;
+  background-color: #f0f0f0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.radio-item:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.radio-item input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #7d28df;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.radio-item input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #7d28df;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radio-item input[type="radio"]:focus {
+  border-color: #9a59e6;
+  box-shadow: 0 0 5px rgba(125, 40, 223, 0.5);
+}
+
+.radio-item label {
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* ================================================== Maid styles ================================================ */
+.horizontal-container {
+  display: flex;
+  gap: 20px; /* Space between elements */
+  flex-wrap: wrap; /* Wraps elements to a new line on smaller screens */
+  width: 100%; /* Ensures the container takes the full width */
+}
+
+/* ================================================== Maintenance styles ================================================ */
+.showImg > img {
+  border-radius: 10px;
+}
+
+/* ================================================== Bill and payment styles ================================================ */
+.bill-form {
+  padding: 10px;
+  margin: 15px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.main-shortcut-bill {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card-bill {
+  display: flex;
+  justify-content: space-between; /* Space between title and price */
+  align-items: center; /* Align vertically center */
+  font-size: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price {
+  margin: 0; /* Remove any default margin */
+  text-align: right;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.pass-btn-new {
+  width: fit-content;
+  background-color: #601875;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.pass-btn-new:hover {
+  background-color: #541459;
+}
+
+/* ------------------------------------- Popover styles -----------------------------------*/
+
+/* Popover Styles */
+.pop {
+  position: relative;
+}
+
+#mydiv {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+}
+
+#mydiv.show {
+  display: block;
+}
+
+.payment-form {
+  max-width: 400px;
+}
+
+.details-table {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.details-table td {
+  padding: 8px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.currency-symbol {
+  color: #666;
+}
+
+.amount-input {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.btn-pay-form {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.btn-pay-form:hover {
+  background-color: #45a049;
+}
+
+/* Overlay background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+
+.overlay.show {
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+}
+/* ================================================== User Profile styles ================================================ */
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.personal-info {
+  margin-top: 2vw;
+  background-color: #eaeaea;
+  padding: 30px;
+  border-radius: 15px;
+  min-width: 80vw;
+  max-width: 81vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.personal-info h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 15px;
+}
+
+.pass-btn {
+  background-color: #601875;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.pass-btn:hover {
+  background-color: #9626b8;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background-color: #bb3c33;
+}
+
+/* ================================= table-history styles ==================================== */
+
+.table-history {
+  width: 100%;
+  margin: 20px auto;
+  overflow-x: auto;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+
+.styled-table thead tr {
+  background-color: #8a26a8;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #3f87a6;
+}
+
+.button-container {
+  display: flex;
+  gap: 5px;
+}
+
+.btn-view,
+.btn-approve,
+.btn-reject,
+.btn-disable {
+  padding: 8px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn-view {
+  background-color: #3498db;
+}
+
+.btn-approve {
+  background-color: #28a745;
+}
+
+.btn-reject {
+  background-color: #e74c3c;
+}
+
+.btn-disable {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.btn-view:hover {
+  background-color: #2980b9;
+}
+
+.btn-approve:hover {
+  background-color: #218838;
+}
+
+.btn-reject:hover {
+  background-color: #c0392b;
+}
+
+/* ======================================================== Styling for Select Dropdown =========================================== */
+#cusTable_wrapper .dataTables_length select {
+  width: 10vh;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  color: #333;
+  font-family: Arial, sans-serif;
+  appearance: none; /* Removes default arrow for custom styling */
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+#cusTable_wrapper .dataTables_length select:focus {
+  border-color: #3f87a6;
+  box-shadow: 0 0 5px rgba(63, 135, 166, 0.5);
+}
+
+/* Optional: Style the caret (arrow) inside the select dropdown */
+#cusTable_wrapper .dataTables_length select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 20 20'%3E%3Cpath fill='%23333' d='M5 8l5 5 5-5H5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+}
+
+/* ===================================================  Styling for Search Input ======================================== */
+#cusTable_wrapper .dataTables_filter input {
+  width: 91%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  color: #333;
+  font-family: Arial, sans-serif;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+#cusTable_wrapper .dataTables_filter input:focus {
+  border-color: #3f87a6;
+  box-shadow: 0 0 5px rgba(63, 135, 166, 0.5);
+}
+
+/* Optional: Adjust the layout of the search label */
+#cusTable_wrapper .dataTables_filter label {
+  font-size: 14px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#cusTable_wrapper .dataTables_filter label::before {
+  content: "🔍"; /* Optional search icon */
+  font-size: 16px;
+  color: #3f87a6;
+}
+
+/* ================================= show password styles ==================================== */
+.toggle-password {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ================================================================= Table css styles ================================================================= */
+
+.table-container {
+  max-width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.record-history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.record-history-table thead {
+  background-color: #7a1b97;
+  color: #ffffff;
+}
+
+.record-history-table th,
+.record-history-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.record-history-table th {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.record-history-table tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.new-bill:hover {
+  background-color: #9f4cc5;
+  color: white;
+}
+
+.paid-bill:hover {
+  background-color: #d6d1c7;
+  color: rgb(73, 71, 71);
+}
+
+.status-pending {
+  color: #aa9a0e;
+  font-weight: bold;
+}
+
+.status-completed {
+  color: #177c2f;
+  font-weight: bold;
+}
+
+.status-denied {
+  color: rgb(194, 49, 49);
+  font-weight: bold;
+}
+
+.new-bill {
+  background-color: #b472ce;
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.btn-view,
+.btn-pay {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-view {
+  background-color: #17a2b8;
+  color: #ffffff;
+  margin-right: 4px;
+}
+
+.btn-view:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.btn-pay {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.btn-pay:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.liners:hover {
+  background-color: #e7e4e4;
+  cursor: pointer;
+}
+/*========================================================================================= Responsive Styles ===================================================================*/
+
+/* For devices larger than 1024px */
+@media only screen and (min-width: 1025px) {
+  nav ul {
+    flex-direction: row; /* Display nav items horizontally */
+  }
+
+  nav ul li {
+    margin-bottom: 0; /* Remove bottom margin for horizontal layout */
+  }
+
+  .form-section {
+    padding: 20px; /* Padding for the form section */
+    max-height: fit-content; /* Max-height for the form section */
+    width: 1000px; /* Make it responsive */
+  }
+
+  .main-shortcut {
+    font-size: 14px;
+  }
+
+  .multi-card {
+    max-width: 45vw;
+    min-width: 40%;
+  }
+}
+
+/* ======================================= For devices up to 1024px (laptops) =============================================*/
+@media only screen and (max-width: 1024px) {
+  header {
+    position: sticky;
+    padding-bottom: 0px;
+  }
+
+  nav ul {
+    flex-direction: row; /* Stack nav items vertically on smaller screens */
+    align-items: center; /* Center align nav items */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+
+  nav ul li {
+    margin-bottom: 10px; /* Add spacing between items */
+  }
+
+  .main-shortcut .card {
+    width: 25vw;
+    padding: 5px;
+  }
+
+  .notification-badge {
+    width: 3vw;
+    height: 3vw;
+    font-size: 2vw;
+  }
+
+  .multi-form {
+    flex-wrap: wrap;
+  }
+
+  .multi-card {
+    width: 100%;
+  }
+
+  .form-section {
+    padding: 20px; /* Padding for the form section */
+    max-height: fit-content; /* Max-height for the form section */
+    width: 600px; /* Make it responsive */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Adjust font size for the title */
+  }
+
+  label {
+    font-size: 0.9rem; /* Smaller label font size */
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  textarea {
+    font-size: 0.9rem; /* Smaller input font size */
+  }
+
+  button[type="submit"] {
+    font-size: 0.9rem; /* Smaller button font size */
+  }
+
+  .apartment-details {
+    flex-direction: column; /* Stack apartment detail fields */
+    width: 100%; /* Full-width for apartment details */
+  }
+
+  .apartment-details label,
+  .apartment-details input {
+    width: 100%; /* Make apartment detail fields full-width */
+    margin-bottom: 10px; /* Add margin between stacked elements */
+  }
+
+  .main-shortcut {
+    font-size: fit-content;
+  }
+
+  .main-shortcut-bill {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+}
+
+/* ======================================= For devices up to 768px (tablets) =============================================*/
+
+@media only screen and (max-width: 768px) {
+  header {
+    position: sticky;
+    padding: 10px; /* Smaller padding for the header */
+  }
+
+  nav ul {
+    flex-direction: row; /* Stack nav items vertically on tablets */
+    align-items: center; /* Center align nav items */
+  }
+
+  .main-shortcut {
+    font-size: 14px;
+    min-height: fit-content;
+  }
+
+  .main-shortcut .card {
+    min-height: fit-content;
+  }
+
+  .notification-badge {
+    width: 4vw;
+    height: 4vw;
+    font-size: 2vw;
+  }
+
+  .form-section {
+    padding: 15px; /* Further reduce padding on tablets */
+    max-height: fit-content; /* Reduce max-height for tablets */
+  }
+
+  h1 {
+    font-size: 1.6rem; /* Further reduce title font size */
+  }
+
+  label {
+    font-size: 0.8rem; /* Smaller label font size */
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  textarea {
+    font-size: 0.8rem; /* Smaller input font size */
+  }
+
+  button[type="submit"] {
+    font-size: 0.8rem; /* Smaller button font size */
+  }
+
+  .apartment-details {
+    flex-direction: column; /* Stack apartment detail fields */
+  }
+
+  .apartment-details label,
+  .apartment-details input {
+    width: 100%; /* Full-width for inputs on smaller screens */
+  }
+
+  .main-shortcut-bill {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+
+/* ======================================= For devices up to 550px (mobile phones) =============================================*/
+
+@media only screen and (max-width: 643px) {
+  header {
+    width: 100%;
+    position: sticky;
+    padding: 10px; /* Smaller padding for the header */
+  }
+
+  .notification-badge {
+    width: 5vw;
+    height: 5vw;
+    font-size: 3vw;
+  }
+
+  .record-history-table th,
+  .record-history-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .btn-view,
+  .btn-edit {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .form-section {
+    padding: 10px; /* Reduce padding further on mobile */
+    max-height: fit-content; /* Reduce max-height further on mobile */
+    max-width: 400px;
+  }
+
+  h1 {
+    font-size: 1.4rem; /* Smaller title for mobile */
+  }
+
+  label {
+    font-size: 0.75rem; /* Smaller label font size */
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  textarea {
+    font-size: 0.75rem; /* Smaller input font size */
+  }
+
+  button[type="submit"] {
+    font-size: 0.75rem; /* Smaller button font size */
+  }
+}
+
+/* ======================================= For devices up to 440px (mobile phones) =============================================*/
+
+@media only screen and (max-width: 440px) {
+  .main-shortcut {
+    flex-wrap: wrap;
+  }
+
+  .main-shortcut .card {
+    min-height: fit-content;
+    min-width: 45%;
+    font-size: 4vw;
+  }
+
+  body {
+    padding: 10px; /* Reduce padding around the body */
+  }
+
+  .form-section {
+    padding: 10px; /* Reduce padding further on mobile */
+    max-height: fit-content; /* Reduce max-height further on mobile */
+    max-width: fit-content;
+  }
+
+  h1 {
+    font-size: 1.4rem; /* Smaller title for mobile */
+  }
+
+  label {
+    font-size: 0.75rem; /* Smaller label font size */
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  textarea {
+    font-size: 0.75rem; /* Smaller input font size */
+  }
+
+  button[type="submit"] {
+    font-size: 0.75rem; /* Smaller button font size */
+  }
+
+  .main-shortcut-bill {
+    grid-template-columns: 1fr;
+  }
+}
+
+.active{
+
+  background-color: #dc199e;
+}
