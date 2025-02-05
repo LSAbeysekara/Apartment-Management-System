@@ -61,8 +61,8 @@ A robust web-based platform designed to streamline the management of tenants, ap
 
 2. **Set Up the Database**
    - Open phpMyAdmin
-   - Create a new database named `apartment_ms`
-   - Import `apartment_ms.sql` from the database folder
+   - Create a new database named `ams`
+   - Import `ams.sql` from the database folder
 
 3. **Configure the Application**
    ```php
