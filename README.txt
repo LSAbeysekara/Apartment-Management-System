@@ -75,7 +75,7 @@ A robust web-based platform designed to streamline the management of tenants, ap
 
 4. **Deploy to Web Server**
    - Copy the project folder to your web server's root directory
-   - For XAMPP: `C:\xampp\htdocs\apartment-management-system`
+   - For XAMPP: `C:\xampp\htdocs\ams
 
 5. **Start Services**
    - Launch XAMPP Control Panel
@@ -83,7 +83,7 @@ A robust web-based platform designed to streamline the management of tenants, ap
 
 6. **Access the Application**
    ```
-   http://localhost/apartment-management-system
+   http://localhost/ams
    ```
 
 ## 🛠️ Technologies Used
@@ -92,24 +92,6 @@ A robust web-based platform designed to streamline the management of tenants, ap
 - **Frontend**: HTML, CSS, JavaScript
 - **Database**: MySQL
 
-## 📂 Project Structure
-
-```
-apartment-management-system/
-├── assets/           # Static resources
-│   ├── css/         # Stylesheets
-│   ├── js/          # JavaScript files
-│   └── images/      # Image resources
-├── includes/         # Configuration files
-├── modules/         # Core functionality
-│   ├── tenants/
-│   ├── apartments/
-│   ├── payments/
-│   └── maintenance/
-├── views/           # HTML templates
-├── database/        # SQL files
-└── index.php        # Entry point
-```
 
 ## 🚀 Future Enhancements
 
