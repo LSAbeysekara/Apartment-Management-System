@@ -1,28 +1,138 @@
-    Apartment Management System
-Description
-The Apartment Management System is a comprehensive web-based application designed to simplify and streamline the management of apartments. Built using PHP, JavaScript, HTML, and CSS, this system offers an intuitive interface for managing apartment details, residents, and payments efficiently. The application is integrated with the PayHere Payment Gateway, enabling seamless and secure online payment processing.
+# 🏢 Apartment Management System
 
-Features
-        Resident Management: Add, update, and manage resident details.
-        Apartment Information: View and maintain apartment-specific data such as block, floor, and unit details.
-        Payment Processing: Integrated with PayHere for secure online payment transactions.
-        User-Friendly Interface: Responsive design ensuring a smooth user experience across devices.
-        Secure Login and Authentication: Protects sensitive data with robust access control.
+A robust web-based platform designed to streamline the management of tenants, apartments, payments, and maintenance requests. This system enhances communication between administrators and residents while providing tools for tracking utilities, expenses, and entry people.
 
-Technologies Used
-        Back-End: PHP
-        Front-End: HTML, CSS, JavaScript
-        Payment Integration: PayHere Payment Gateway
+## ✨ Features
 
-Installation
-Clone the repository to your local machine:
-                git clone https://github.com/LSAbeysekara/Apartment-Management-System.git  
-Set up the database by importing the provided SQL file.
-Update configuration files with your server and PayHere API credentials.
-Host the application on a local or remote server.
+- **Apartment Management**
+  - Keep detailed records of all apartments
+  - Track occupancy status and availability
+  - Maintain apartment specifications and features
 
-How to Contribute
-Feel free to fork this repository and make improvements. Pull requests are welcome!
+- **Payment Handling**
+  - Process and track rental payments
+  - Generate automated payment reminders
+  - Maintain payment history and receipts
 
-License
-This project is licensed under the MIT License.
+- **Maintenance Requests**
+  - Submit and track maintenance tickets
+  - Assign tasks to maintenance staff
+  - Monitor request status and completion
+
+- **Entry People Tracking**
+  - Log visitor details and duration of stay
+  - Monitor service personnel access
+  - Generate visitor reports
+
+- **Utility Tracking**
+  - Monitor electricity, water, and gas usage
+  - Generate utility bills
+  - Track consumption patterns
+
+- **Expense Management**
+  - Record building maintenance costs
+  - Track operational expenses
+  - Generate expense reports
+
+- **Communication System**
+  - Send announcements to tenants
+  - Handle complaints and feedback
+  - Maintain communication history
+
+- **Automated Notifications**
+  - Payment due reminders
+  - Maintenance update alerts
+  - Important announcements
+
+## ⚙️ Installation Guide
+
+### Prerequisites
+
+- XAMPP or any local server environment (Apache, MySQL)
+- Git (optional, for cloning the repository)
+
+### Installation Steps
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/LSAbeysekara/Apartment-Management-System.git
+   ```
+   Alternatively, download the ZIP file and extract it.
+
+2. **Set Up the Database**
+   - Open phpMyAdmin
+   - Create a new database named `apartment_ms`
+   - Import `apartment_ms.sql` from the database folder
+
+3. **Configure the Application**
+   ```php
+   // Update includes/config.php with your database credentials
+   $host = "localhost";      // Server host
+   $username = "root";       // Database username
+   $password = "";          // Database password
+   $database = "apartment_ms"; // Database name
+   ```
+
+4. **Deploy to Web Server**
+   - Copy the project folder to your web server's root directory
+   - For XAMPP: `C:\xampp\htdocs\apartment-management-system`
+
+5. **Start Services**
+   - Launch XAMPP Control Panel
+   - Start Apache and MySQL services
+
+6. **Access the Application**
+   ```
+   http://localhost/apartment-management-system
+   ```
+
+## 🛠️ Technologies Used
+
+- **Backend**: PHP
+- **Frontend**: HTML, CSS, JavaScript
+- **Database**: MySQL
+
+## 📂 Project Structure
+
+```
+apartment-management-system/
+├── assets/           # Static resources
+│   ├── css/         # Stylesheets
+│   ├── js/          # JavaScript files
+│   └── images/      # Image resources
+├── includes/         # Configuration files
+├── modules/         # Core functionality
+│   ├── tenants/
+│   ├── apartments/
+│   ├── payments/
+│   └── maintenance/
+├── views/           # HTML templates
+├── database/        # SQL files
+└── index.php        # Entry point
+```
+
+## 🚀 Future Enhancements
+
+- Multi-language support for international users
+- SMS/Email notification system integration
+- Mobile application development
+- Advanced reporting and analytics
+- Payment gateway integration
+- Document management system
+- Smart home integration capabilities
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## 👥 Contributing
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📞 Support
+
+For support, email support@apartmentms.com or join our Slack channel.
